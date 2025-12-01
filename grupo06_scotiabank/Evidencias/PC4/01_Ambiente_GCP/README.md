@@ -32,8 +32,8 @@ storage.objectViewer	Permite lectura de objetos para flujos event-driven
 
 Asignar roles a los usuarios a travez de la linea de comandos CLI de Google Cloud Plataform
 
-- **Cambiar en Usurio1** : PONER@USUARIO1 -> por el usuário admitido
-- **Cambiar en Usuario2** : PONER@USUARIO2 -> por el usuário admitido
+- **Cambiar en Usurio1** : PONER@USUARIO1 -> por el usuario 1 admitido
+- **Cambiar en Usuario2** : PONER@USUARIO2 -> por el usuario 2 admitido
 
 ### 🔸 Rol 1 – Scraping y carga de datos al Data Lake
 
@@ -70,6 +70,7 @@ Responsabilidades:
 
 - Diseño de capas Bronze, Silver (Plata) y Gold (Oro)
 
+
 **Permisos otorgados:**
 ```bash
 gcloud projects add-iam-policy-binding grupo6-scotiabank --member=user:PONER@USUARIO2 --role="roles/bigquery.dataOwner" && \
@@ -81,15 +82,30 @@ gcloud projects add-iam-policy-binding grupo6-scotiabank --member=user:PONER@USU
 
 ➡️ Este rol gobierna la evolución de los datos, pasando de sin procesar → curados → listos para explotación analítica.
 
+### 🔸 Cuenta de Servicio - Clave
+
+Se creo una clave para la cuenta de servicio con el cual permitira la explotación analítica.
+
+![Creacion de clave cuenta de servicio 1](Evidencias/image.png)
+![Creacion de clave cuenta de servicio 2](Evidencias/image-1.png)
+![Creacion de clave cuenta de servicio 3](Evidencias/image-2.png)
+
+Esto descargará y generará un archivo JSON con credenciales y claves que permitiran la coneccion con fuentes externar analíticas como el PowerBI
+
+![Creacion de clave cuenta de servicio 4](Evidencias/image-3.png)
+
+
+
+
 ## 🔐 4. Principios de Seguridad aplicados
 
 Se implementaron prácticas recomendadas:
 
-✔ IAM granular por función técnica
-✔ Ningún usuario con rol Owner
-✔ Acceso a Storage y BigQuery controlado por capas
-✔ Service Accounts independientes para automatizaciones
-✔ Uso de CLI → mayor auditabilidad del despliegue
+- ✔ IAM granular por función técnica
+- ✔ Ningún usuario con rol Owner
+- ✔ Acceso a Storage y BigQuery controlado por capas
+- ✔ Service Accounts independientes para automatizaciones
+- ✔ Uso de CLI → mayor auditabilidad del despliegue
 
 ![Configuración_IAM](Evidencias\1-IAM_Roles.png)
 
