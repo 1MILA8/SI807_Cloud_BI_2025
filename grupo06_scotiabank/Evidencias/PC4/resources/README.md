@@ -7,6 +7,7 @@ Aquí se encuentran:
 * La **Cloud Function `bronce-dispatcher`**, que se activa ante nuevos archivos RAW en Cloud Storage.
 * Los **jobs PySpark ejecutados en Dataproc**, encargados de procesar la capa Bronce, Plata y generar la capa Oro.
 * El job especial `crear_capa_oro.py`, que inicializa las **dimensiones del modelo analítico Oro**.
+* **Video explicativo** del proceso.
 
 ---
 
