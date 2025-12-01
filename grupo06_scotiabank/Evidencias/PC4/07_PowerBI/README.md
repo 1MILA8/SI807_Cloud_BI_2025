@@ -47,11 +47,27 @@ Una vez establecida la conexión, Power BI muestra los:
 
 ![alt text](Evidencias/6-Seleccion_Tablas.png)
 
-## 📅 5. Relación del modelo de tablas en Power BI
+## 📅 5. Relación del modelo estrella de tablas en Power BI
+
+Se mantiene genera una relación del modelo estrella de 1 a muchos de la tablas de dimensiones hacia la tabla de eventos.
 
 ![alt text](Evidencias/7-Esquema-Relacional.png)
 
 ## 📈 6. Dashboard final
 
-(gráficos, KPIs, segmentaciones y hallazgos)
+Con el esquema relacional habilidato se desarrollaron las siguientes vistas de los indicadores:
+
+![alt text](Evidencias/8_1_Indicadores.png)
+![alt text](Evidencias/8_2_KPIS-1.png)
+![alt text](Evidencias/8_3_KPIS-2.png)
+![alt text](Evidencias/8_4_Evolutivos.png)
+![alt text](Evidencias/8_5_Comparativos.png)
+
+## ♻️7. Reproducibilidad
+
+Para poder replicar y hacer uso del dashboard generado, descargar el archivo ubicado en [docs](..\docs\README.md), establecer la conexión de la fuente de datos de BigQuery vista en los pasos 1,2,3 y 4.
+
+Generar el modelo estrella de la parte 5.
+
+
 
