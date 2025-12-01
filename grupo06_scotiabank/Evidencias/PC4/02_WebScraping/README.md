@@ -1,4 +1,4 @@
-# Proyecto SBS Downloader - GCP Implementation
+# Servicio de Descarga de archivos desde la página de la SBS
 
 Sistema automatizado y seguro para descargar reportes mensuales de la Superintendencia de Banca, Seguros y AFP (SBS) del Perú y almacenarlos en Google Cloud Storage.
 
@@ -30,7 +30,7 @@ gsutil ls -r gs://grupo6_scotiabank_bucket/data/raw/SBS/
 ## 📋 Descripción
 
 Este proyecto implementa un sistema serverless optimizado que:
-- **Descarga directa**: Usa URLs directas (sin scraping), **10x más rápido** que métodos tradicionales
+- **Descarga directa**: Usa URLs directas, **10x más rápido** que métodos tradicionales
 - **Ejecución automática**: Se ejecuta el primer día de cada mes a las 2 AM
 - **Descarga incremental**: Solo descarga archivos nuevos (evita duplicados)
 - **Trazabilidad completa**: Registro CSV de todas las descargas en Cloud Storage
