@@ -120,8 +120,14 @@ ORDER BY kpis_rojos DESC
 LIMIT 20;
 <<<<<<< Updated upstream
 ```
+<<<<<<< Updated upstream
 =======
 ```
+# 🎥 Evidencia — Validaciones y KPIs en BigQuery
+
+[![Validaciones BigQuery](https://img.youtube.com/vi/BbjPsJvi9TI/0.jpg)](https://youtu.be/BbjPsJvi9TI)
+>>>>>>> Stashed changes
+=======
 # 🎥 Evidencia — Validaciones y KPIs en BigQuery
 
 [![Validaciones BigQuery](https://img.youtube.com/vi/BbjPsJvi9TI/0.jpg)](https://youtu.be/BbjPsJvi9TI)
