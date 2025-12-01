@@ -10,7 +10,7 @@ Los ETL se ejecutan a través de una **Cloud Function (bronce-dispatcher)** que 
 
 El código completo de la Cloud Function se encuentra en la carpeta:
 
-👉 **`/resources/bronce-dispatcher/`** ([Ver carpeta en GitHub](../resources/README.md)) 
+👉 **`/resources/bronce-dispatcher/`** ([Ver carpeta en GitHub](../resources)) 
 
 ### Estructura interna de la Cloud Function:
 
