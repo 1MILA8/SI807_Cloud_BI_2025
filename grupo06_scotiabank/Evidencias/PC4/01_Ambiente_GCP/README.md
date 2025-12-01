@@ -6,6 +6,8 @@ Se creó un proyecto independiente en Google Cloud Platform para aislar todos lo
 
 Se aplicó el principio de mínimo privilegio, asignando permisos únicamente según las funciones técnicas del flujo de datos. Cada rol fue otorgado vía CLI usando gcloud, garantizando trazabilidad.
 
+![Ingresar_IAM](Evidencias/2_Input_IAM.png)
+
 ### ✔️ Roles técnicos generales del proyecto
 
 ```json
@@ -22,17 +24,17 @@ gcloud projects add-iam-policy-binding grupo6-scotiabank \
   --role="roles/storage.objectViewer"
 
 ``` 
-Propósitos asignados:
-
 Servicio / Cuenta	Función
-storage.objectCreator	Permite carga de archivos desde scraping hacia el Data Lake
-artifactregistry.reader	Acceso a imágenes necesarias para servicios compute
+
+- storage.objectCreator:Permite carga de archivos desde scraping hacia el Data Lake
+
+- artifactregistry.reader: Acceso a imágenes necesarias para servicios compute
 storage.objectViewer	Permite lectura de objetos para flujos event-driven
 ## 👥 3. Roles asignados según función en el pipeline
 
 Asignar roles a los usuarios a travez de la linea de comandos CLI de Google Cloud Plataform
 
-- **Cambiar en Usurio1** : PONER@USUARIO1 -> por el usuario 1 admitido
+- **Cambiar en Usuario1** : PONER@USUARIO1 -> por el usuario 1 admitido
 - **Cambiar en Usuario2** : PONER@USUARIO2 -> por el usuario 2 admitido
 
 ### 🔸 Rol 1 – Scraping y carga de datos al Data Lake
@@ -53,10 +55,12 @@ gcloud projects add-iam-policy-binding grupo6-scotiabank --member="user:PONER@US
 gcloud projects add-iam-policy-binding grupo6-scotiabank --member="user:PONER@USUARIO1" --role="roles/storage.admin" && \
 gcloud projects add-iam-policy-binding grupo6-scotiabank --member="user:PONER@USUARIO1" --role="roles/cloudscheduler.admin" && \
 gcloud projects add-iam-policy-binding grupo6-scotiabank --member="user:PONER@USUARIO1" --role="roles/iam.serviceAccountUser" && \
-gcloud projects add-iam-policy-binding grupo6-scotiabank --member="user:PONER@USUARIO1" --role="roles/run.admin"
+gcloud projects add-iam-policy-binding grupo6-scotiabank --member="user:PONER@USUARIO1" --role="roles/run.admin" && \
+gcloud projects add-iam-policy-binding grupo6-scotiabank --member="user:PONER@USUARIO1" --role="roles/resourcemanager.projectIamAdmin"
 ```
 
 ➡️ Con este set, el rol puede programar, ejecutar y operar funciones serverless encargadas de capturar los datos fuente y almacenarlos en la capa bronze del Data Lake.
+
 
 ### 🔸 Rol 2 – Procesamiento, ETL y modelado analítico
 
@@ -82,19 +86,22 @@ gcloud projects add-iam-policy-binding grupo6-scotiabank --member=user:PONER@USU
 
 ➡️ Este rol gobierna la evolución de los datos, pasando de sin procesar → curados → listos para explotación analítica.
 
+![Respuesta_Output](Evidencias/3-Out_Put_IAM.png)
+
+
 ### 🔸 Cuenta de Servicio - Clave
 
 Se creo una clave para la cuenta de servicio con el cual permitira la explotación analítica.
 
-![Creacion de clave cuenta de servicio 1](Evidencias/image.png)
-![Creacion de clave cuenta de servicio 2](Evidencias/image-1.png)
-![Creacion de clave cuenta de servicio 3](Evidencias/image-2.png)
+![Creacion de clave cuenta de servicio 1](Evidencias/4_Agregar_Clave.png)
+![Creacion de clave cuenta de servicio 2](Evidencias/5_Escoger_formato.png)
+![Creacion de clave cuenta de servicio 3](Evidencias/6_Clave_Creada.png)
 
 Esto descargará y generará un archivo JSON con credenciales y claves que permitiran la coneccion con fuentes externar analíticas como el PowerBI
 
-![Creacion de clave cuenta de servicio 4](Evidencias/image-3.png)
+![Creacion de clave cuenta de servicio 4](Evidencias/7_Json_Vista.png)
 
-
+📘 Puede comprobar la conexión en [08_PowerBI](../08_PowerBI/README.md)
 
 
 ## 🔐 4. Principios de Seguridad aplicados
@@ -140,4 +147,3 @@ El entorno de GCP se encuentra adecuadamente preparado para soportar:
 
 - Visualización en Power BI
 
-La sección cumple con los indicadores de seguridad, gobernanza y despliegue real exigidos en la rúbrica.
