@@ -163,19 +163,19 @@ simulando que se encuentran en el SFTP.
 
 <img width="500" height="240" alt="image" src="https://github.com/user-attachments/assets/e627ddcb-020a-446f-b3de-6ed84591c507" />
 
-#Limpieza de datos con metricas
+# Limpieza de datos con metricas
 
-##Uso de Jupiter Notebook
+## Uso de Jupiter Notebook
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/672eb8c0-2699-42e8-9661-e52b450a9072" />
-##Vista de Métricas con Pandas
+## Vista de Métricas con Pandas
 <img width="1577" height="681" alt="image" src="https://github.com/user-attachments/assets/265facf9-beb3-443d-8753-88a08079f196" />
-##Data Limpia Subida al Trusted
+## Data Limpia Subida al Trusted
 <img width="1910" height="742" alt="image" src="https://github.com/user-attachments/assets/4ac4170f-28b1-433d-8a71-ba8f95283df2" />
-##Carga de datos a tablas
+## Carga de datos a tablas
 <img width="1246" height="404" alt="image" src="https://github.com/user-attachments/assets/06ddbb56-e685-4632-b88b-acf9e815acfd" />
-##Cambio de nombres a tablas
+## Cambio de nombres a tablas
 <img width="1151" height="406" alt="image" src="https://github.com/user-attachments/assets/da974216-9e5c-4693-b4b1-537f7100f071" />
-#Prueba de Querys
+## Prueba de Querys
 <img width="1462" height="739" alt="image" src="https://github.com/user-attachments/assets/2a573f29-aa7c-4c37-947a-471d2886700b" />
 
 
