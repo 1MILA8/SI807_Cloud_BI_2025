@@ -116,39 +116,6 @@ Se implementaron prácticas recomendadas:
 
 ![Configuración_IAM](Evidencias\1-IAM_Roles.png)
 
-## 🌐 5. Componentes de Red
-
-Esta sección se completará tras definir la configuración final de la VPC, firewalls y segmentación interna del proyecto.
-
-## 📊 6. Diagrama del Ambiente
-
-El diagrama arquitectónico será agregado como:
-
-01_Ambiente_GCP/arquitectura_gcp.mmd
-01_Ambiente_GCP/arquitectura_gcp.png
-
-
-Incluyendo los flujos:
-```json
-SBS → Web Scraping → Cloud Storage (Bronce)
-       ↓
-Dataproc / PySpark → BigQuery (Plata / Oro)
-       ↓
-Power BI
-```
-
-El entorno de GCP se encuentra adecuadamente preparado para soportar:
-
-- Ingesta
-
-- Procesamiento distribuido
-
-- Explotación analítica
-
-- Visualización en Power BI
-
-La sección cumple con los indicadores de seguridad, gobernanza y despliegue real exigidos en la rúbrica.
-
 # Escalabilidad, Elasticidad y Alta Disponibilidad
 
 ## 1. ANÁLISIS DE NECESIDADES DEL PROYECTO
