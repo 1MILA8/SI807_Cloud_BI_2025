@@ -118,4 +118,9 @@ JOIN `grupo6-scotiabank.oro.dim_banco` b USING(id_banco)
 GROUP BY banco
 ORDER BY kpis_rojos DESC
 LIMIT 20;
+
 ```
+# 🎥 Evidencia — Validaciones y KPIs en BigQuery
+
+[![Validaciones BigQuery](https://img.youtube.com/vi/BbjPsJvi9TI/0.jpg)](https://youtu.be/BbjPsJvi9TI)
+
