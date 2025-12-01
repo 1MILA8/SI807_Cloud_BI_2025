@@ -294,6 +294,9 @@ oro.hecho_riesgo
 
 ![batch-liquidez](Evidencias/batch_job_ratio_liquidez.png)
 
+* **Logs representativos** exportados desde Cloud Logging (en formatos CSV y JSON), útiles para validar ejecuciones, estados del batch y mensajes del driver/worker.
+
+Estos elementos permiten demostrar el funcionamiento correcto del pipeline y apoyar procesos de revisión y monitoreo. [**Ver Logs**](Evidencias/Logs/jb_ratio_liquidez/)
 
 ---
 
@@ -313,5 +316,7 @@ gcloud dataproc batches submit pyspark \
 ```
 
 👉 Más detalle en **`/resources/`** ([Ver carpeta en GitHub](../resources/README.md))
+👉 [**Ver Logs**](Evidencias/Logs/crear_capa_oro/)
+
 
 ---
