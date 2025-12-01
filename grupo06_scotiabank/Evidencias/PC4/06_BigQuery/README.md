@@ -49,11 +49,15 @@ LIMIT 20;
 ## 3️⃣ Validación de cobertura temporal del dataset
 🕒 Verifica que cada indicador posea información continua y no tenga huecos temporales.
 ```sql
-SELECT id_indicador,i.nombre,  COUNT(DISTINCT id_fecha) AS meses_reportados
-FROM `grupo6-scotiabank.oro.hecho_riesgo`
-GROUP BY id_indicador
+SELECT 
+  hr.id_indicador,
+  i.nombre AS indicador,
+  COUNT(DISTINCT hr.id_fecha) AS meses_reportados
+FROM `grupo6-scotiabank.oro.hecho_riesgo` hr
 JOIN `grupo6-scotiabank.oro.dim_indicador` i USING(id_indicador)
-ORDER BY 2 DESC;
+GROUP BY hr.id_indicador, i.nombre
+ORDER BY meses_reportados DESC
+LIMIT 20;
 ```
 
 # 🚀 KPIs Y MÉTRICAS — ANÁLISIS EVOLUTIVO
@@ -73,7 +77,8 @@ FROM `grupo6-scotiabank.oro.hecho_riesgo` hr
 JOIN `grupo6-scotiabank.oro.dim_banco` b USING(id_banco)
 JOIN `grupo6-scotiabank.oro.dim_indicador` i USING(id_indicador)
 GROUP BY 1,2,3,4
-ORDER BY 3, AVG(hr.valor) DESC;
+ORDER BY promedio_valor DESC
+LIMIT 20;
 ```
 
 ## 5️⃣ KPI — Tendencia mensual por banco e indicador (variación porcentual)
