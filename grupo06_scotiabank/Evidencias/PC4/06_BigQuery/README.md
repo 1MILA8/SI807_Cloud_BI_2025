@@ -46,7 +46,7 @@ JOIN `grupo6-scotiabank.oro.dim_banco` b USING(id_banco)
 LIMIT 20;
 ```
 
-3️⃣ Validación de cobertura temporal del dataset
+## 3️⃣ Validación de cobertura temporal del dataset
 🕒 Verifica que cada indicador posea información continua y no tenga huecos temporales.
 ```sql
 SELECT id_indicador,i.nombre,  COUNT(DISTINCT id_fecha) AS meses_reportados
