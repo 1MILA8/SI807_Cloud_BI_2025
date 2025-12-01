@@ -18,9 +18,8 @@ El objetivo de este trabajo es implementar un flujo funcional de sistema de inte
  ├── 03_ETL/                   # Limpieza, consolidación, CSV, carga autom.
  ├── 04_DataLake/              # Raw / Trusted / Refined en GCS
  ├── 05_Procesamiento_Spark/   # Dataproc, PySpark, notebooks
- ├── 06_BigQuery/              # Tablas, particiones, consultas SQL
- ├── 07_Modelo_Estrella/       # Modelo estrella
- ├── 08_PowerBI/               # Conexión con BigQuery + dashboards
+ ├── 06_BigQuery/              # Tablas, consultas SQL
+ ├── 07_PowerBI/               # Conexión con BigQuery + dashboards
  ├── Evidencias_Generales/     # Capturas, videos, PR, merges
  └── docs/                     
 ```
@@ -110,7 +109,7 @@ Se empleó:
 
 Esto garantiza acceso controlado a datasets refinados sin exponer usuarios finales a los servicios de GCP.
 
-📘 Para más detalle, revisa [08_PowerBI](08_PowerBI/README.md)
+📘 Para más detalle, revisa [07_PowerBI](07_PowerBI/README.md)
 
 ### ✔️ Seguridad, IAM, roles y gobierno
 
