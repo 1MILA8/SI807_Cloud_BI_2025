@@ -26,6 +26,13 @@ gsutil ls -r gs://grupo6_scotiabank_bucket/data/raw/SBS/
 **Costo**: ~$0.12/mes | **Región**: São Paulo | **Seguridad**: Privada con Service Accounts
 
 ---
+## 📽️ Video demostración
+
+<div align = "center">
+  <video src="./Evidencias/Despliegue_Prueba.mp4" controls width="600"></video>
+</div>
+
+---
 
 ## 📋 Descripción
 
@@ -186,8 +193,8 @@ gcloud projects get-iam-policy grupo6-scotiabank \
 mkdir sbs-downloader
 cd sbs-downloader
 
-# 2. Crear archivos (copiar contenido de artifacts)
-# main.py, requirements.txt, deploy.sh, README.md, .gitignore
+# 2. Crear archivos
+# main.py, requirements.txt, deploy.sh, .gitignore
 
 # 3. Dar permisos de ejecución
 chmod +x deploy.sh
