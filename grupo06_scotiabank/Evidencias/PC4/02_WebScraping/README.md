@@ -28,9 +28,12 @@ gsutil ls -r gs://grupo6_scotiabank_bucket/data/raw/SBS/
 ---
 ## 📽️ Video demostración
 
-<div align = "center">
-  <video src="./Evidencias/Despliegue_Prueba.mp4" controls width="600"></video>
+<div align="center">
+
+[![Watch the video](https://img.youtube.com/vi/sbNbY4ZetX4/hqdefault.jpg)](https://youtu.be/sbNbY4ZetX4)
+
 </div>
+
 
 ---
 
